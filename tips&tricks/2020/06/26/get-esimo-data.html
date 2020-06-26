@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Скачиваем данные об уровнях воды с ЕСИМО | hydrogo</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Скачиваем данные об уровнях воды с ЕСИМО" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="С использованием python и библиотек requests и pandas" />
+<meta property="og:description" content="С использованием python и библиотек requests и pandas" />
+<link rel="canonical" href="https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html" />
+<meta property="og:url" content="https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html" />
+<meta property="og:site_name" content="hydrogo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-26T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-06-26T00:00:00-05:00","headline":"Скачиваем данные об уровнях воды с ЕСИМО","description":"С использованием python и библиотек requests и pandas","mainEntityOfPage":{"@type":"WebPage","@id":"https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html"},"@type":"BlogPosting","url":"https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html","dateModified":"2020-06-26T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://hydrogo.github.io/blog/feed.xml" title="hydrogo" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','156352448','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Скачиваем данные об уровнях воды с ЕСИМО | hydrogo</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Скачиваем данные об уровнях воды с ЕСИМО" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="С использованием python и библиотек requests и pandas" />
+<meta property="og:description" content="С использованием python и библиотек requests и pandas" />
+<link rel="canonical" href="https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html" />
+<meta property="og:url" content="https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html" />
+<meta property="og:site_name" content="hydrogo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-26T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-06-26T00:00:00-05:00","headline":"Скачиваем данные об уровнях воды с ЕСИМО","description":"С использованием python и библиотек requests и pandas","mainEntityOfPage":{"@type":"WebPage","@id":"https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html"},"@type":"BlogPosting","url":"https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html","dateModified":"2020-06-26T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://hydrogo.github.io/blog/feed.xml" title="hydrogo" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','156352448','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">hydrogo</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Скачиваем данные об уровнях воды с ЕСИМО</h1><p class="page-description">С использованием python и библиотек requests и pandas</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-26T00:00:00-05:00" itemprop="datePublished">
+        Jun 26, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#tips&tricks">tips&tricks</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#что-такое-есимо">Что такое ЕСИМО?</a></li>
+<li class="toc-entry toc-h2"><a href="#скачать-данные-вручную">Скачать данные вручную</a></li>
+<li class="toc-entry toc-h2"><a href="#код-на-python-для-автоматической-загрузки-данных">Код на python для автоматической загрузки данных</a></li>
+<li class="toc-entry toc-h2"><a href="#заключение">Заключение</a></li>
+</ul><h2 id="что-такое-есимо">
+<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%B5%D1%81%D0%B8%D0%BC%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что такое ЕСИМО?</h2>
+
+<p><a href="http://esimo.ru/portal/"><strong>ЕСИМО</strong></a> – единая государственная система информации об обстановке в Мировом океане. Несмотря на название, содержит в себе базы данных наблюдений за многими параметрами окружающей среды (<a href="http://esimo.ru/portal/portal/esimo-user/data">посмотреть что есть</a>).</p>
+
+<h2 id="скачать-данные-вручную">
+<a class="anchor" href="#%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B2%D1%80%D1%83%D1%87%D0%BD%D1%83%D1%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>Скачать данные вручную</h2>
+
+<p>Представление баз данных в <strong>ЕСИМО</strong> примерно одинаковое. Здесь и далее в качестве примера будем использовать оперативную базу данных измеренных уровней воды на гидропостах <a href="http://esimo.ru/dataview/viewresource?resourceId=RU_RIHMI-WDC_1325">RU_RIHMI-WDC_1325_1</a>.</p>
+
+<p>Веб-интерфейс <strong>ЕСИМО</strong> для работы с базами данных монструозный, но дело свое делает – можно отсортировать, сделать выборку по дате.</p>
+
+<p>На скриншоте показаны базовые элементы и какую кнопку нажать для скачивания. Я предпочитаю скачивать данные в <code class="highlighter-rouge">csv</code> – этот формат является более универсальным и с ним легче потом работать, чем с <code class="highlighter-rouge">xls</code>.</p>
+
+<p><img src="/blog/images/2020-06-25-ESIMO.png" alt="" title="ЕСИМО в действии"></p>
+
+<div class="Toast">
+   <span class="Toast-icon"><svg class="octicon octicon-info" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>
+   <span class="Toast-content">Даже если вы выберете один день и один пост, все равно скачаются все доступные на данный момент данные</span>
+</div>
+
+<p>Недостатки такого варианта скачивания данных:</p>
+
+<ul>
+  <li>Все делается руками,</li>
+  <li>Так как данные доступны только за последние 7 дней, то заходить за оперативной информацией нужно регулярно.</li>
+</ul>
+
+<h2 id="код-на-python-для-автоматической-загрузки-данных">
+<a class="anchor" href="#%D0%BA%D0%BE%D0%B4-%D0%BD%D0%B0-python-%D0%B4%D0%BB%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9-%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>Код на python для автоматической загрузки данных</h2>
+
+<p>Чтобы не травмировать себя ежедневным общением с  <strong>ЕСИМО</strong> нужно написать немного кода. Будем использовать стандартную библиотеку <code class="highlighter-rouge">python</code>, а также библиотеки <code class="highlighter-rouge">request</code> (для отправки запросов на сервер) и <code class="highlighter-rouge">pandas</code> (для обработки полученных данных).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Импортируем необходимые библиотеки
+</span><span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="c1"># Корневой адрес к которому мы будем делать запрос
+</span><span class="n">base_url</span> <span class="o">=</span> <span class="s">'http://esimo.ru/dataview/getresourceexport'</span> 
+
+<span class="c1"># Идентификатор нашей базы данных
+</span><span class="n">db_id</span> <span class="o">=</span> <span class="s">'RU_RIHMI-WDC_1325_1'</span>
+
+<span class="c1"># Определяем даты
+# Будем скачивать данные за последнюю неделю
+</span>
+<span class="c1"># Сегодняшняя дата
+</span><span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="c1"># Запрос устроен таким образом, что отсчет начинается с завтрашнего дня
+</span><span class="n">tomorrow</span> <span class="o">=</span> <span class="p">(</span><span class="n">today</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">d"</span><span class="p">)</span>
+<span class="n">week_back</span> <span class="o">=</span> <span class="p">(</span><span class="n">today</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">6</span><span class="p">))</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">d"</span><span class="p">)</span>
+
+<span class="c1"># Задаем параметры запроса
+</span><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">'format'</span><span class="p">:</span> <span class="s">'csv'</span><span class="p">,</span>
+
+          <span class="s">'resourceid'</span><span class="p">:</span> <span class="n">db_id</span><span class="p">,</span>
+
+          <span class="s">'filter'</span><span class="p">:</span> <span class="n">f</span><span class="s">"(((m4400 between '{week_back}' and '{tomorrow}') or (CAST(m4400 as text) like </span><span class="se">\'</span><span class="si">%2099</span><span class="s">-12-31</span><span class="si">%</span><span class="se">\'</span><span class="s">)))"</span>
+
+         <span class="p">}</span>
+
+<span class="c1"># Отправляем POST запрос на сервер
+</span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+
+<span class="c1"># Считываем пришедшие данные
+</span><span class="n">raw_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
+
+<span class="c1"># Получаем данные в сыром виде, поэтому требуется 
+# дополнительная обработка с помощью pandas
+</span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="n">raw_data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)),</span>
+                     <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                     <span class="n">sep</span><span class="o">=</span><span class="s">'","'</span><span class="p">,</span>
+                     <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+                     <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s">"id"</span><span class="p">,</span> 
+                            <span class="s">"hydropost_name"</span><span class="p">,</span> 
+                            <span class="s">"latitude"</span><span class="p">,</span> 
+                            <span class="s">"longitude"</span><span class="p">,</span> 
+                            <span class="s">"timestamp"</span><span class="p">,</span> 
+                            <span class="s">"Level"</span><span class="p">,</span> 
+                            <span class="s">"Level_mean"</span><span class="p">],</span>
+                     <span class="n">engine</span><span class="o">=</span><span class="s">'python'</span><span class="p">)</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span><span class="o">.</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+
+<span class="c1"># Сохраняем данные
+</span><span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">f</span><span class="s">"~/Downloads/esimo_{today.strftime('</span><span class="si">%</span><span class="s">Y</span><span class="si">%</span><span class="s">m</span><span class="si">%</span><span class="s">d')}.csv"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p><a href="https://colab.research.google.com/drive/1-SUHELtPx_oEDDEzdzmf6K7Jgh2Ll_fw?usp=sharing">Попробовать в Google Colab</a>.</p>
+
+<p>Посмотрим данные с гидропоста в Новокузнецке:</p>
+
+<p><code class="highlighter-rouge">data[data["id"]=="10240"]</code></p>
+
+<p><img src="/blog/images/2020-06-25-table.png" alt="" title="Данные по гидропосту в Новокузнецке"></p>
+
+<p>Теперь у нас в руках универсальный инструмент получения оперативных данных об измеренных уровнях воды.</p>
+
+<p>Представленный фрагмент кода я использовал для создания системы краткосрочного прогнозирования уровня воды <a href="https://openlevels.github.io/">OpenLevels</a>. Надеюсь, что и вам он пригодится.</p>
+
+<h2 id="заключение">
+<a class="anchor" href="#%D0%B7%D0%B0%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Заключение</h2>
+
+<p>Несомненно, Росгидромету есть куда стремиться в улучшении доступа к результатам мониторинговых наблюдений на сети метеорологических станций и гидрологических постов. <strong>ЕСИМО</strong> в зубы не смотрят, но хотя бы посмотрите как обстоят дела в США:</p>
+
+<ul>
+  <li>Гидрологические данные: https://waterservices.usgs.gov/,</li>
+  <li>Метеорологические данные: https://www.weather.gov/</li>
+</ul>
+
+<p>Отдельно отмечу оторванность нашей мониторинговой сети от глобальной сети обмена гидрологической информации <a href="http://www.wmo.int/pages/prog/hwrp/chy/whos/index.php">WHOS</a>, созданной в рамках Всемирной метеорологической организации.</p>
+
+<p>Такая оторванность имеет тяжелые последствия. Например, в нашей <a href="https://www.tandfonline.com/doi/full/10.1080/02626667.2020.1762886">недавней работе</a> мы показали, что имея доступ к национальному архиву наблюдений за речным стоком, можно существенно улучшить качество регионального гидрологического реанализа. К сожалению, отсутствие этих данных в открытом доступе ограничивает эффективность моделей, на основе которых мы можем оценивать располагаемые водные ресурсы, а также возможную динамику их изменения в будущем.</p>
+
+<p>Но эта уже совсем другая история.</p>
+
+  </div><a class="u-url" href="/blog/tips&tricks/2020/06/26/get-esimo-data.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Georgy Ayzel&#39;s blog</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/hydrogo" title="hydrogo"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/hydrogo89" title="hydrogo89"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

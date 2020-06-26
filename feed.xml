@@ -1,1 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://hydrogo.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hydrogo.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-26T05:38:22-05:00</updated><id>https://hydrogo.github.io/blog/feed.xml</id><title type="html">hydrogo</title><subtitle>Georgy Ayzel's blog</subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://hydrogo.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hydrogo.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-26T08:42:06-05:00</updated><id>https://hydrogo.github.io/blog/feed.xml</id><title type="html">hydrogo</title><subtitle>Georgy Ayzel's blog</subtitle><entry><title type="html">Скачиваем данные об уровнях воды с ЕСИМО</title><link href="https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html" rel="alternate" type="text/html" title="Скачиваем данные об уровнях воды с ЕСИМО" /><published>2020-06-26T00:00:00-05:00</published><updated>2020-06-26T00:00:00-05:00</updated><id>https://hydrogo.github.io/blog/tips&amp;tricks/2020/06/26/get-esimo-data</id><content type="html" xml:base="https://hydrogo.github.io/blog/tips&amp;tricks/2020/06/26/get-esimo-data.html">&lt;h2 id=&quot;что-такое-есимо&quot;&gt;Что такое ЕСИМО?&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://esimo.ru/portal/&quot;&gt;&lt;strong&gt;ЕСИМО&lt;/strong&gt;&lt;/a&gt; – единая государственная система информации об обстановке в Мировом океане. Несмотря на название, содержит в себе базы данных наблюдений за многими параметрами окружающей среды (&lt;a href=&quot;http://esimo.ru/portal/portal/esimo-user/data&quot;&gt;посмотреть что есть&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;скачать-данные-вручную&quot;&gt;Скачать данные вручную&lt;/h2&gt;
+
+&lt;p&gt;Представление баз данных в &lt;strong&gt;ЕСИМО&lt;/strong&gt; примерно одинаковое. Здесь и далее в качестве примера будем использовать оперативную базу данных измеренных уровней воды на гидропостах &lt;a href=&quot;http://esimo.ru/dataview/viewresource?resourceId=RU_RIHMI-WDC_1325&quot;&gt;RU_RIHMI-WDC_1325_1&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Веб-интерфейс &lt;strong&gt;ЕСИМО&lt;/strong&gt; для работы с базами данных монструозный, но дело свое делает – можно отсортировать, сделать выборку по дате.&lt;/p&gt;
+
+&lt;p&gt;На скриншоте показаны базовые элементы и какую кнопку нажать для скачивания. Я предпочитаю скачивать данные в &lt;code class=&quot;highlighter-rouge&quot;&gt;csv&lt;/code&gt; – этот формат является более универсальным и с ним легче потом работать, чем с &lt;code class=&quot;highlighter-rouge&quot;&gt;xls&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-06-25-ESIMO.png&quot; alt=&quot;&quot; title=&quot;ЕСИМО в действии&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;Toast&quot;&gt;
+   &lt;span class=&quot;Toast-icon&quot;&gt;&lt;svg class=&quot;octicon octicon-info&quot; viewBox=&quot;0 0 14 16&quot; version=&quot;1.1&quot; width=&quot;14&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M6.3 5.69a.942.942 0 01-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 01-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;
+   &lt;span class=&quot;Toast-content&quot;&gt;Даже если вы выберете один день и один пост, все равно скачаются все доступные на данный момент данные&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Недостатки такого варианта скачивания данных:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Все делается руками,&lt;/li&gt;
+  &lt;li&gt;Так как данные доступны только за последние 7 дней, то заходить за оперативной информацией нужно регулярно.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;код-на-python-для-автоматической-загрузки-данных&quot;&gt;Код на python для автоматической загрузки данных&lt;/h2&gt;
+
+&lt;p&gt;Чтобы не травмировать себя ежедневным общением с  &lt;strong&gt;ЕСИМО&lt;/strong&gt; нужно написать немного кода. Будем использовать стандартную библиотеку &lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt;, а также библиотеки &lt;code class=&quot;highlighter-rouge&quot;&gt;request&lt;/code&gt; (для отправки запросов на сервер) и &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt; (для обработки полученных данных).&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Импортируем необходимые библиотеки
+&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;io&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;datetime&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Корневой адрес к которому мы будем делать запрос
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'http://esimo.ru/dataview/getresourceexport'&lt;/span&gt; 
+
+&lt;span class=&quot;c1&quot;&gt;# Идентификатор нашей базы данных
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;db_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'RU_RIHMI-WDC_1325_1'&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Определяем даты
+# Будем скачивать данные за последнюю неделю
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Сегодняшняя дата
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Запрос устроен таким образом, что отсчет начинается с завтрашнего дня
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tomorrow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timedelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;days&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Y-&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;m-&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;week_back&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timedelta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;days&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Y-&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;m-&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Задаем параметры запроса
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'format'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+          &lt;span class=&quot;s&quot;&gt;'resourceid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+
+          &lt;span class=&quot;s&quot;&gt;'filter'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;(((m4400 between '{week_back}' and '{tomorrow}') or (CAST(m4400 as text) like &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%2099&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;-12-31&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;)))&quot;&lt;/span&gt;
+
+         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Отправляем POST запрос на сервер
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Считываем пришедшие данные
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raw_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Получаем данные в сыром виде, поэтому требуется 
+# дополнительная обработка с помощью pandas
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StringIO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raw_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+                     &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                     &lt;span class=&quot;n&quot;&gt;sep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&quot;,&quot;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                     &lt;span class=&quot;n&quot;&gt;usecols&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+                     &lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                            &lt;span class=&quot;s&quot;&gt;&quot;hydropost_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                            &lt;span class=&quot;s&quot;&gt;&quot;latitude&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                            &lt;span class=&quot;s&quot;&gt;&quot;longitude&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                            &lt;span class=&quot;s&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                            &lt;span class=&quot;s&quot;&gt;&quot;Level&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                            &lt;span class=&quot;s&quot;&gt;&quot;Level_mean&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+                     &lt;span class=&quot;n&quot;&gt;engine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'python'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop_duplicates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Сохраняем данные
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;~/Downloads/esimo_{today.strftime('&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d')}.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://colab.research.google.com/drive/1-SUHELtPx_oEDDEzdzmf6K7Jgh2Ll_fw?usp=sharing&quot;&gt;Попробовать в Google Colab&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Посмотрим данные с гидропоста в Новокузнецке:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;data[data[&quot;id&quot;]==&quot;10240&quot;]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-06-25-table.png&quot; alt=&quot;&quot; title=&quot;Данные по гидропосту в Новокузнецке&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Теперь у нас в руках универсальный инструмент получения оперативных данных об измеренных уровнях воды.&lt;/p&gt;
+
+&lt;p&gt;Представленный фрагмент кода я использовал для создания системы краткосрочного прогнозирования уровня воды &lt;a href=&quot;https://openlevels.github.io/&quot;&gt;OpenLevels&lt;/a&gt;. Надеюсь, что и вам он пригодится.&lt;/p&gt;
+
+&lt;h2 id=&quot;заключение&quot;&gt;Заключение&lt;/h2&gt;
+
+&lt;p&gt;Несомненно, Росгидромету есть куда стремиться в улучшении доступа к результатам мониторинговых наблюдений на сети метеорологических станций и гидрологических постов. &lt;strong&gt;ЕСИМО&lt;/strong&gt; в зубы не смотрят, но хотя бы посмотрите как обстоят дела в США:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Гидрологические данные: https://waterservices.usgs.gov/,&lt;/li&gt;
+  &lt;li&gt;Метеорологические данные: https://www.weather.gov/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Отдельно отмечу оторванность нашей мониторинговой сети от глобальной сети обмена гидрологической информации &lt;a href=&quot;http://www.wmo.int/pages/prog/hwrp/chy/whos/index.php&quot;&gt;WHOS&lt;/a&gt;, созданной в рамках Всемирной метеорологической организации.&lt;/p&gt;
+
+&lt;p&gt;Такая оторванность имеет тяжелые последствия. Например, в нашей &lt;a href=&quot;https://www.tandfonline.com/doi/full/10.1080/02626667.2020.1762886&quot;&gt;недавней работе&lt;/a&gt; мы показали, что имея доступ к национальному архиву наблюдений за речным стоком, можно существенно улучшить качество регионального гидрологического реанализа. К сожалению, отсутствие этих данных в открытом доступе ограничивает эффективность моделей, на основе которых мы можем оценивать располагаемые водные ресурсы, а также возможную динамику их изменения в будущем.&lt;/p&gt;
+
+&lt;p&gt;Но эта уже совсем другая история.&lt;/p&gt;</content><author><name></name></author><summary type="html">Что такое ЕСИМО?</summary></entry></feed>
