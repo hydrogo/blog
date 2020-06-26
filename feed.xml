@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://hydrogo.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hydrogo.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-26T08:42:06-05:00</updated><id>https://hydrogo.github.io/blog/feed.xml</id><title type="html">hydrogo</title><subtitle>Georgy Ayzel's blog</subtitle><entry><title type="html">Скачиваем данные об уровнях воды с ЕСИМО</title><link href="https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html" rel="alternate" type="text/html" title="Скачиваем данные об уровнях воды с ЕСИМО" /><published>2020-06-26T00:00:00-05:00</published><updated>2020-06-26T00:00:00-05:00</updated><id>https://hydrogo.github.io/blog/tips&amp;tricks/2020/06/26/get-esimo-data</id><content type="html" xml:base="https://hydrogo.github.io/blog/tips&amp;tricks/2020/06/26/get-esimo-data.html">&lt;h2 id=&quot;что-такое-есимо&quot;&gt;Что такое ЕСИМО?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://hydrogo.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hydrogo.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-26T09:01:25-05:00</updated><id>https://hydrogo.github.io/blog/feed.xml</id><title type="html">hydrogo</title><subtitle>Georgy Ayzel's blog</subtitle><entry><title type="html">Скачиваем данные об уровнях воды из ЕСИМО</title><link href="https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html" rel="alternate" type="text/html" title="Скачиваем данные об уровнях воды из ЕСИМО" /><published>2020-06-26T00:00:00-05:00</published><updated>2020-06-26T00:00:00-05:00</updated><id>https://hydrogo.github.io/blog/tips&amp;tricks/2020/06/26/get-esimo-data</id><content type="html" xml:base="https://hydrogo.github.io/blog/tips&amp;tricks/2020/06/26/get-esimo-data.html">&lt;h2 id=&quot;что-такое-есимо&quot;&gt;Что такое ЕСИМО?&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://esimo.ru/portal/&quot;&gt;&lt;strong&gt;ЕСИМО&lt;/strong&gt;&lt;/a&gt; – единая государственная система информации об обстановке в Мировом океане. Несмотря на название, содержит в себе базы данных наблюдений за многими параметрами окружающей среды (&lt;a href=&quot;http://esimo.ru/portal/portal/esimo-user/data&quot;&gt;посмотреть что есть&lt;/a&gt;).&lt;/p&gt;
 
@@ -89,7 +89,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://colab.research.google.com/drive/1-SUHELtPx_oEDDEzdzmf6K7Jgh2Ll_fw?usp=sharing&quot;&gt;Попробовать в Google Colab&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Посмотрим данные с гидропоста в Новокузнецке:&lt;/p&gt;
+&lt;p&gt;Посмотрим на данные с гидропоста в Новокузнецке:&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;data[data[&quot;id&quot;]==&quot;10240&quot;]&lt;/code&gt;&lt;/p&gt;
 
@@ -104,8 +104,8 @@
 &lt;p&gt;Несомненно, Росгидромету есть куда стремиться в улучшении доступа к результатам мониторинговых наблюдений на сети метеорологических станций и гидрологических постов. &lt;strong&gt;ЕСИМО&lt;/strong&gt; в зубы не смотрят, но хотя бы посмотрите как обстоят дела в США:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Гидрологические данные: https://waterservices.usgs.gov/,&lt;/li&gt;
-  &lt;li&gt;Метеорологические данные: https://www.weather.gov/&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://waterservices.usgs.gov/&quot;&gt;Гидрологические данные&lt;/a&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.weather.gov/&quot;&gt;Метеорологические данные&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Отдельно отмечу оторванность нашей мониторинговой сети от глобальной сети обмена гидрологической информации &lt;a href=&quot;http://www.wmo.int/pages/prog/hwrp/chy/whos/index.php&quot;&gt;WHOS&lt;/a&gt;, созданной в рамках Всемирной метеорологической организации.&lt;/p&gt;
