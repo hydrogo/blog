@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-title: Скачиваем данные об уровнях воды с ЕСИМО
+title: Скачиваем данные об уровнях воды из ЕСИМО
 description: С использованием python и библиотек requests и pandas
 categories: [tips&tricks]
 ---
@@ -94,7 +94,7 @@ data.to_csv(f"~/Downloads/esimo_{today.strftime('%Y%m%d')}.csv")
 [Попробовать в Google Colab](https://colab.research.google.com/drive/1-SUHELtPx_oEDDEzdzmf6K7Jgh2Ll_fw?usp=sharing).
 
 
-Посмотрим данные с гидропоста в Новокузнецке:
+Посмотрим на данные с гидропоста в Новокузнецке:
 
 `data[data["id"]=="10240"]`
 
@@ -110,8 +110,8 @@ data.to_csv(f"~/Downloads/esimo_{today.strftime('%Y%m%d')}.csv")
 
 Несомненно, Росгидромету есть куда стремиться в улучшении доступа к результатам мониторинговых наблюдений на сети метеорологических станций и гидрологических постов. **ЕСИМО** в зубы не смотрят, но хотя бы посмотрите как обстоят дела в США:
 
-* Гидрологические данные: https://waterservices.usgs.gov/,
-* Метеорологические данные: https://www.weather.gov/
+* [Гидрологические данные](https://waterservices.usgs.gov/),
+* [Метеорологические данные](https://www.weather.gov/).
 
 Отдельно отмечу оторванность нашей мониторинговой сети от глобальной сети обмена гидрологической информации [WHOS](http://www.wmo.int/pages/prog/hwrp/chy/whos/index.php), созданной в рамках Всемирной метеорологической организации. 
 
