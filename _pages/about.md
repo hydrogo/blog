@@ -4,10 +4,43 @@ title: About Me
 permalink: /about/
 ---
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+I am Georgy Ayzel
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+And this is how I work, think and live (actually not).
 
+You are welcome to enjoy my posts about life and using open-source tools in hydrology.
 
+## Operational services
+* [OpenForecast](https://openforecast.github.io/)
+* [OpenLevels](https://openlevels.github.io/)
 
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+## Research interests
+
+* Hydrologic modelling
+* Calculations for ungauged basins
+* Short-term runoff forecasting
+* Machine and deep learning for hydrology
+* Land surface – Atmosphere interactions
+* Climate change assessment
+* Water resources under changing conditions
+* Quantitative precipitation nowcasting
+
+## Current Research
+
+* Precipitation nowcasting using modern advances in image processing techniques and deep learning
+* Rainfall-runoff hydrological modelling using conceptual lumped models and state-of-art machine and deep learning techniques
+
+## Publications
+
+* WoS-indexed publications can be viewed in my [Orcid page](https://orcid.org/0000-0001-5608-9110)
+* My profile on Google Scholar [Google Scholar](https://scholar.google.com/citations?user=wXSZ4ogAAAAJ)
+
+## Education
+
+* Ph.D., 2014: Institute of Water Problems, Moscow, Russia
+* M.S., 2011: Department of Hydrology, Geographical Faculty, Lomonosov Moscow State University, Russia
+
+## Motivation
+
+* Open Science: open data, free software, reproducible research
+* Memento Mori
