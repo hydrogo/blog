@@ -53,7 +53,9 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g4777">
+       id="g4777"
+       inkscape:export-xdpi="62.544563"
+       inkscape:export-ydpi="62.544563">
       <flowRoot
          transform="matrix(0.26458333,0,0,0.26458333,0.09751786,0)"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -84,6 +86,8 @@
        id="path4767"
        cx="37.89521"
        cy="40.40704"
-       r="9.4187708" />
+       r="9.4187708"
+       inkscape:export-xdpi="62.544563"
+       inkscape:export-ydpi="62.544563" />
   </g>
 </svg>
