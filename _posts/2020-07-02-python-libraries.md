@@ -73,7 +73,7 @@ Below I categorize Python libraries I use in my research.
 
 ## The environment
 
-You can use [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) to install all the libraries mentioned above in one isolated programming environment. Everything you need is just to create a file `environment.yml` copy-pasting the text below and then run `conda env create -f environment.yml` in your terminal. Have fun!
+You can use [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) to install all the libraries mentioned above in one isolated programming environment. Everything you need is just to create a file `environment.yml` copy-pasting the text below and then run `conda env create -f environment.yml` in your terminal.
 
 ```yaml
 name: megaenv
