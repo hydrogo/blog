@@ -6,6 +6,7 @@ description: Which you may (or may not) consider suitable for you
 categories: [tips&tricks]
 ---
 
+## Prologue
 I use Linux (Ubuntu LTS) as my primary operating system since 2015. Celebrating the 5th anniversary, I wish to share the list of applications (both standalone and web) I use on an everyday basis -- for programming, writing, and chilling. I hope you will find some of them suitable for you to get more work done. Los!
 
 ## Internet
