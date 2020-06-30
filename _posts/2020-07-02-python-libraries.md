@@ -1,12 +1,12 @@
 ---
 toc: true
 layout: post
-title: Python libraries I use for my research
+title: Python libraries I use in my research
 description: Which you may (or may not) consider suitable for your research too
 categories: [tips&tricks]
 ---
 
-I do have a pretty skimpy experience in programming. As many pupils in Russia, I had been learning Pascal for a couple of years in school. Then it was Fortran in the University. During my PhD in Russia, I had written a couple of scripts also in Fortran. After that, I have stick to R for a couple of projects and finished my small journey with Python, which I use as a primary programming language since 2015.
+I do have a pretty skimpy experience in programming. As many pupils in Russia, I had been learning Pascal for a couple of years in school. Then it was Fortran in university. During my PhD in Russia, I had written a couple of scripts also in Fortran. After that, I have stick to R for a couple of projects and finished my small journey with Python, which I use as a primary programming language since 2015.
 
 Python does have a pretty powerful standard library, but Python's real power is in the utilization of additional libraries that can provide you an endless functionality.  
 
