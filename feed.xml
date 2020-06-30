@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://hydrogo.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hydrogo.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-26T09:01:25-05:00</updated><id>https://hydrogo.github.io/blog/feed.xml</id><title type="html">hydrogo</title><subtitle>Georgy Ayzel's blog</subtitle><entry><title type="html">Скачиваем данные об уровнях воды из ЕСИМО</title><link href="https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html" rel="alternate" type="text/html" title="Скачиваем данные об уровнях воды из ЕСИМО" /><published>2020-06-26T00:00:00-05:00</published><updated>2020-06-26T00:00:00-05:00</updated><id>https://hydrogo.github.io/blog/tips&amp;tricks/2020/06/26/get-esimo-data</id><content type="html" xml:base="https://hydrogo.github.io/blog/tips&amp;tricks/2020/06/26/get-esimo-data.html">&lt;h2 id=&quot;что-такое-есимо&quot;&gt;Что такое ЕСИМО?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://hydrogo.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hydrogo.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-30T05:19:56-05:00</updated><id>https://hydrogo.github.io/blog/feed.xml</id><title type="html">hydrogo</title><subtitle>Georgy Ayzel's blog</subtitle><entry><title type="html">Apps I use on Linux</title><link href="https://hydrogo.github.io/blog/tips&tricks/2020/07/01/linux-apps.html" rel="alternate" type="text/html" title="Apps I use on Linux" /><published>2020-07-01T00:00:00-05:00</published><updated>2020-07-01T00:00:00-05:00</updated><id>https://hydrogo.github.io/blog/tips&amp;tricks/2020/07/01/linux-apps</id><content type="html" xml:base="https://hydrogo.github.io/blog/tips&amp;tricks/2020/07/01/linux-apps.html">&lt;p&gt;I use Linux (Ubuntu LTS) as my primary operating system since 2015. Celebrating the 5th anniversary, I wish to share the list of applications (both standalone and web) I use on an everyday basis – for programming, writing, and chilling. I hope you will find some of them suitable for you to get more work done. Los!&lt;/p&gt;
+
+&lt;h2 id=&quot;internet&quot;&gt;Internet&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mozilla.org/en-US/firefox/&quot;&gt;Firefox&lt;/a&gt; – my default web-browser. Security, extensions, customization capabilities are the reasons to name it the must in available options.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;Chrome&lt;/a&gt; – some applications (usually developed by government authorities) are still optimized directly for Chrome. It is nice to have Chrome at hand for these (rare) cases.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;mails&quot;&gt;Mails&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.gnome.org/Apps/Geary&quot;&gt;Geary&lt;/a&gt; – for my personal email addresses, I always use corresponding native web-services (Gmail, Yandex), all work-related emails go to Geary. Minimalism and great shortcuts rule.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gtd&quot;&gt;GTD&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ticktick.com&quot;&gt;TickTick&lt;/a&gt; – to-do list manager. Fast, multiplatform, and customizable.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.notion.so&quot;&gt;Notion&lt;/a&gt; – a perfect tool to store all the stuff together in one place.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://keep.google.com/&quot;&gt;Google Keep&lt;/a&gt; – inbox for notes, which then go to the TickTick or Notion (or don’t).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;messengers&quot;&gt;Messengers&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://telegram.org/&quot;&gt;Telegram&lt;/a&gt; – one love for messaging.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://slack.com&quot;&gt;Slack&lt;/a&gt; – work-related chats.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;writing&quot;&gt;Writing&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/&quot;&gt;Google Docs&lt;/a&gt; – paper drafts, reviews, official documents.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.overleaf.com&quot;&gt;Overleaf&lt;/a&gt; – powerful &lt;code class=&quot;highlighter-rouge&quot;&gt;latex&lt;/code&gt; editor in your browser. The must for paper writing.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.notion.so&quot;&gt;Notion&lt;/a&gt; – notes, lists, thoughts.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VS Code&lt;/a&gt; – for writing in the plain text of markdown. This post has been written in VS Code.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.gnome.org/Apps/Gedit&quot;&gt;gedit&lt;/a&gt; – lightweight text editor. A great alternative to VS Code on old machines (e.g., for my 6 y.o. laptop).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.libreoffice.org/&quot;&gt;LibreOffice&lt;/a&gt; – ugly, full of bugs, but sometimes useful for opening &lt;code class=&quot;highlighter-rouge&quot;&gt;.docx&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;programming&quot;&gt;Programming&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.anaconda.com/products/individual&quot;&gt;Anaconda&lt;/a&gt; – managing programming environments for &lt;code class=&quot;highlighter-rouge&quot;&gt;Python&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jupyter.org/&quot;&gt;Jupyter Notebook&lt;/a&gt; – interactive IDE for &lt;code class=&quot;highlighter-rouge&quot;&gt;Python&lt;/code&gt; (other languages are also supported). Runs in your browser.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VS code&lt;/a&gt; – I use the VS Code when I need to write &lt;code class=&quot;highlighter-rouge&quot;&gt;Python&lt;/code&gt; scripts or develop libraries. Many extensions for VS Code have been developed to make software development easier – linter, auto-completion, indentation, ssh-tunnelling, to name a few.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tmux/tmux/wiki&quot;&gt;tmux&lt;/a&gt; – life-saving application to manage multiple terminals.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/screen/&quot;&gt;screen&lt;/a&gt; – when tmux is unavailable on a remote host.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nano-editor.org/&quot;&gt;nano&lt;/a&gt; – text editor that works in every terminal.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://colab.research.google.com/&quot;&gt;Google Colab&lt;/a&gt; – interactive cloud IDE for prototyping workflows that require GPU for feasible computation (e.g., deep neural networks).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://vast.ai&quot;&gt;vast.ai&lt;/a&gt; – service for renting remote hosts with GPU enabled.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.zotero.org/&quot;&gt;Zotero&lt;/a&gt; – saves all academic papers in one place. Useful &lt;a href=&quot;https://ikashnitsky.github.io/2019/zotero/&quot;&gt;tips and tricks&lt;/a&gt; on customization.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mendeley.com/&quot;&gt;Mendeley&lt;/a&gt; – I migrated from Mendeley to Zotero because of two reasons: (1) Elsevier is an evil; (2) Mendeley extensions didn’t work correctly both for Firefox and Chrome. It could be an alternative if you don’t mind the reasons above.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;drawing&quot;&gt;Drawing&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://inkscape.org/&quot;&gt;Inkscape&lt;/a&gt; – for drawing vector graphics.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kde.org/applications/en/graphics/org.kde.kolourpaint&quot;&gt;KolourPaint&lt;/a&gt; – Paint for Linux.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://app.diagrams.net/&quot;&gt;draw.io&lt;/a&gt; – for drawing diagrams (e.g., research workflows).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;virtualization&quot;&gt;Virtualization&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.virtualbox.org/&quot;&gt;VirtualBox&lt;/a&gt; – for having WindowsXP and MS Office 2003 at hand (not a joke).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;music&quot;&gt;Music&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://music.yandex.ru/&quot;&gt;Yandex.Music&lt;/a&gt; – works in Russia.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.spotify.com&quot;&gt;Spotify&lt;/a&gt; – works outside Russia.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;news&quot;&gt;News&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://feedly.com&quot;&gt;Feedly&lt;/a&gt; – RSS client that aggregates news from &lt;a href=&quot;https://habr.com&quot;&gt;Habr&lt;/a&gt;, &lt;a href=&quot;https://fivethirtyeight.com/&quot;&gt;5.38&lt;/a&gt;, and other blogs.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tweetdeck.twitter.com/&quot;&gt;Tweetdeck&lt;/a&gt; – web-client for Tweeter from Tweeter.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://telegram.org/&quot;&gt;Telegram&lt;/a&gt; – for reading channels (e.g., https://t.me/vsevstok).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;utils&quot;&gt;Utils&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.teamviewer.com&quot;&gt;TeamViewer&lt;/a&gt; – the easiest way to connect to a remote server using a graphical interface.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://doublecmd.sourceforge.io/&quot;&gt;Double Commander&lt;/a&gt; – two-panel file manager for oldies.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.deepl.com/translator&quot;&gt;DeepL&lt;/a&gt; – translator powered by deep learning. A great alternative to Google.Translator.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://surfshark.com/&quot;&gt;Surfshark&lt;/a&gt; – VPN-client.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;epilogue&quot;&gt;Epilogue&lt;/h2&gt;
+
+&lt;p&gt;I don’t have any plans to migrate from Linux back to Windows or to macOS. I am happy and satisfied with the tools I mentioned above – it is everything that I need to get my work done.&lt;/p&gt;</content><author><name></name></author><summary type="html">I use Linux (Ubuntu LTS) as my primary operating system since 2015. Celebrating the 5th anniversary, I wish to share the list of applications (both standalone and web) I use on an everyday basis – for programming, writing, and chilling. I hope you will find some of them suitable for you to get more work done. Los!</summary></entry><entry><title type="html">Скачиваем данные об уровнях воды из ЕСИМО</title><link href="https://hydrogo.github.io/blog/tips&tricks/2020/06/26/get-esimo-data.html" rel="alternate" type="text/html" title="Скачиваем данные об уровнях воды из ЕСИМО" /><published>2020-06-26T00:00:00-05:00</published><updated>2020-06-26T00:00:00-05:00</updated><id>https://hydrogo.github.io/blog/tips&amp;tricks/2020/06/26/get-esimo-data</id><content type="html" xml:base="https://hydrogo.github.io/blog/tips&amp;tricks/2020/06/26/get-esimo-data.html">&lt;h2 id=&quot;что-такое-есимо&quot;&gt;Что такое ЕСИМО?&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://esimo.ru/portal/&quot;&gt;&lt;strong&gt;ЕСИМО&lt;/strong&gt;&lt;/a&gt; – единая государственная система информации об обстановке в Мировом океане. Несмотря на название, содержит в себе базы данных наблюдений за многими параметрами окружающей среды (&lt;a href=&quot;http://esimo.ru/portal/portal/esimo-user/data&quot;&gt;посмотреть что есть&lt;/a&gt;).&lt;/p&gt;
 
