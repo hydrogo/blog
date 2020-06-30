@@ -1,4 +1,124 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://hydrogo.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hydrogo.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-30T05:28:10-05:00</updated><id>https://hydrogo.github.io/blog/feed.xml</id><title type="html">hydrogo</title><subtitle>Georgy Ayzel's blog</subtitle><entry><title type="html">Apps I use on Linux</title><link href="https://hydrogo.github.io/blog/tips&tricks/2020/07/01/linux-apps.html" rel="alternate" type="text/html" title="Apps I use on Linux" /><published>2020-07-01T00:00:00-05:00</published><updated>2020-07-01T00:00:00-05:00</updated><id>https://hydrogo.github.io/blog/tips&amp;tricks/2020/07/01/linux-apps</id><content type="html" xml:base="https://hydrogo.github.io/blog/tips&amp;tricks/2020/07/01/linux-apps.html">&lt;h2 id=&quot;prologue&quot;&gt;Prologue&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://hydrogo.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hydrogo.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-06-30T08:34:57-05:00</updated><id>https://hydrogo.github.io/blog/feed.xml</id><title type="html">hydrogo</title><subtitle>Georgy Ayzel's blog</subtitle><entry><title type="html">Python libraries I use for my research</title><link href="https://hydrogo.github.io/blog/tips&tricks/2020/07/02/python-libraries.html" rel="alternate" type="text/html" title="Python libraries I use for my research" /><published>2020-07-02T00:00:00-05:00</published><updated>2020-07-02T00:00:00-05:00</updated><id>https://hydrogo.github.io/blog/tips&amp;tricks/2020/07/02/python-libraries</id><content type="html" xml:base="https://hydrogo.github.io/blog/tips&amp;tricks/2020/07/02/python-libraries.html">&lt;p&gt;I do have a pretty skimpy experience in programming. As many pupils in Russia, I had been learning Pascal for a couple of years in school. Then it was Fortran in the University. During my PhD in Russia, I had written a couple of scripts also in Fortran. After that, I have stick to R for a couple of projects and finished my small journey with Python, which I use as a primary programming language since 2015.&lt;/p&gt;
+
+&lt;p&gt;Python does have a pretty powerful standard library, but Python’s real power is in the utilization of additional libraries that can provide you an endless functionality.&lt;/p&gt;
+
+&lt;p&gt;Below I categorize Python libraries I use in my research.&lt;/p&gt;
+
+&lt;h2 id=&quot;general&quot;&gt;General&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://numpy.org/&quot;&gt;numpy&lt;/a&gt; – the fundamental library for scientific computing.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pandas.pydata.org/&quot;&gt;pandas&lt;/a&gt; – the fundamental library for data analysis.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.scipy.org/&quot;&gt;scipy&lt;/a&gt; – provides efficient numerical routines for, e.g., interpolation and optimization.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;geographical-analysis&quot;&gt;Geographical analysis&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;geopandas&lt;/a&gt; – &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt; for geographical data. If you have &lt;code class=&quot;highlighter-rouge&quot;&gt;.shp&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.geojson&lt;/code&gt; files to analyze, you definitely should give &lt;code class=&quot;highlighter-rouge&quot;&gt;geopandas&lt;/code&gt; a try!&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://geopandas.org/&quot;&gt;xarray&lt;/a&gt; – the best library for manipulation of meteorological datasets provided in &lt;code class=&quot;highlighter-rouge&quot;&gt;netcdf&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;grib&lt;/code&gt; formats.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://code.mpimet.mpg.de/projects/cdo/&quot;&gt;cdo&lt;/a&gt; – I use it exclusively for remapping meteorological data from one grid to another.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;radar-related-nowcasting&quot;&gt;Radar-related (nowcasting)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.wradlib.org/en/stable/&quot;&gt;wradlib&lt;/a&gt; – the core library for weather radar data processing.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opencv.org/&quot;&gt;opencv&lt;/a&gt; – the fundamental library for computer vision problems (e.g., computation of optical flow).&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://scikit-image.org/&quot;&gt;scikit-image&lt;/a&gt; – image processing without a pain.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;soft-matter.github.io/trackpy/&quot;&gt;trackpy&lt;/a&gt; – tracking particles made easy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;machine-learning&quot;&gt;Machine learning&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://scikit-learn.org/stable/&quot;&gt;scikit-learn&lt;/a&gt; – the core package for machine learning applications.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.tensorflow.org/&quot;&gt;tensorflow&lt;/a&gt; – deep neural networks development in a few of lines of code with built-in &lt;a href=&quot;https://keras.io/&quot;&gt;keras&lt;/a&gt; API.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://facebook.github.io/prophet/&quot;&gt;fbprophet&lt;/a&gt; – time-series forecasting library developed by Facebook. I use it for water levels forecasting in &lt;a href=&quot;https://openlevels.github.io/&quot;&gt;OpenLevels&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;plotting&quot;&gt;Plotting&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://matplotlib.org/&quot;&gt;matplotlib&lt;/a&gt; – the core library for plotting.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://seaborn.pydata.org/&quot;&gt;seaborn&lt;/a&gt; – nicer plots, &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt; support.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.bokeh.org/&quot;&gt;bokeh&lt;/a&gt; – interactive plots. For example, &lt;a href=&quot;https://openforecast.github.io/10240.html&quot;&gt;runoff forecasts&lt;/a&gt; produced by &lt;a href=&quot;https://openforecast.github.io/&quot;&gt;OpenForecast&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://python-visualization.github.io/folium/&quot;&gt;folium&lt;/a&gt; – interactive maps, e.g. like in &lt;a href=&quot;https://openforecast.github.io/&quot;&gt;1&lt;/a&gt;, &lt;a href=&quot;https://openlevels.github.io/&quot;&gt;2&lt;/a&gt;, &lt;a href=&quot;https://hydrogo.github.io/beats-of-the-era/&quot;&gt;3&lt;/a&gt;, &lt;a href=&quot;https://hydrogo.github.io/4Y11M2D/&quot;&gt;4&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/python-visualization/branca&quot;&gt;branca&lt;/a&gt; – customization of &lt;code class=&quot;highlighter-rouge&quot;&gt;html&lt;/code&gt; popups in &lt;code class=&quot;highlighter-rouge&quot;&gt;folium&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;code-development&quot;&gt;Code development&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jupyter.org/&quot;&gt;jupyter&lt;/a&gt; – interactive IDE running in your web-browser.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.pylint.org/&quot;&gt;pylint&lt;/a&gt; – library developed for code analysis.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;misc&quot;&gt;Misc&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.h5py.org/&quot;&gt;h5py&lt;/a&gt; – make use of HDF files.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://numba.pydata.org/&quot;&gt;numba&lt;/a&gt; – accelerates your code for fast compute.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://requests.readthedocs.io/en/master/&quot;&gt;requests&lt;/a&gt; – API requests for humans.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;dependencies-non-direct-usage&quot;&gt;Dependencies (non-direct usage)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;pytables – HDF files processing with &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;xlrd – reading xls with &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;dask – recommended &lt;code class=&quot;highlighter-rouge&quot;&gt;xarray&lt;/code&gt; dependency.&lt;/li&gt;
+  &lt;li&gt;netCDF4 – recommended &lt;code class=&quot;highlighter-rouge&quot;&gt;xarray&lt;/code&gt; dependency.&lt;/li&gt;
+  &lt;li&gt;bottleneck – recommended &lt;code class=&quot;highlighter-rouge&quot;&gt;xarray&lt;/code&gt; dependency.&lt;/li&gt;
+  &lt;li&gt;cartopy – recommended &lt;code class=&quot;highlighter-rouge&quot;&gt;xarray&lt;/code&gt; dependency.&lt;/li&gt;
+  &lt;li&gt;pynio – recommended &lt;code class=&quot;highlighter-rouge&quot;&gt;xarray&lt;/code&gt; dependency.&lt;/li&gt;
+  &lt;li&gt;pseudonetcdf – recommended &lt;code class=&quot;highlighter-rouge&quot;&gt;xarray&lt;/code&gt; dependency.&lt;/li&gt;
+  &lt;li&gt;nc-time-axis – recommended &lt;code class=&quot;highlighter-rouge&quot;&gt;xarray&lt;/code&gt; dependency.&lt;/li&gt;
+  &lt;li&gt;cfgrib – reading &lt;code class=&quot;highlighter-rouge&quot;&gt;grib&lt;/code&gt; files.&lt;/li&gt;
+  &lt;li&gt;eccodes – &lt;code class=&quot;highlighter-rouge&quot;&gt;cfgrib&lt;/code&gt; dependency.&lt;/li&gt;
+  &lt;li&gt;descartes – plotting polygons with &lt;code class=&quot;highlighter-rouge&quot;&gt;geopandas&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;pims – recommended &lt;code class=&quot;highlighter-rouge&quot;&gt;trackpy&lt;/code&gt; dependency.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-environment&quot;&gt;The environment&lt;/h2&gt;
+
+&lt;p&gt;You can use &lt;a href=&quot;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file&quot;&gt;conda&lt;/a&gt; to install all the libraries mentioned above in one isolated programming environment. Everything you need is just to create a file &lt;code class=&quot;highlighter-rouge&quot;&gt;environment.yml&lt;/code&gt; copy-pasting the text below and then run &lt;code class=&quot;highlighter-rouge&quot;&gt;conda env create -f environment.yml&lt;/code&gt; in your terminal. Have fun!&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;megaenv&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;channels&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;conda-forge&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;dependencies&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;numpy&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;pandas&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;scipy&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;geopandas&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;xarray&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cdo&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;wradlib&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opencv&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;scikit-image&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;trackpy&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;scikit-learn&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;tensorflow&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;fbprophet&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;matplotlib&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;seaborn&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bokeh&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;folium&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;branca&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jupyter&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;pylint&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;h5py&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;numba&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;requests&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;pytables&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;xlrd&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dask&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;netCDF4&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bottleneck&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cartopy&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;pynio&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;pseudonetcdf&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;nc-time-axis&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cfgrib&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;eccodes&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;descartes&lt;/span&gt; 
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;pims&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After the installation (can take really long), you need to activate the environment you created by running &lt;code class=&quot;highlighter-rouge&quot;&gt;conda activate megaenv&lt;/code&gt; in your terminal. Have fun!&lt;/p&gt;</content><author><name></name></author><summary type="html">I do have a pretty skimpy experience in programming. As many pupils in Russia, I had been learning Pascal for a couple of years in school. Then it was Fortran in the University. During my PhD in Russia, I had written a couple of scripts also in Fortran. After that, I have stick to R for a couple of projects and finished my small journey with Python, which I use as a primary programming language since 2015.</summary></entry><entry><title type="html">Apps I use on Linux</title><link href="https://hydrogo.github.io/blog/tips&tricks/2020/07/01/linux-apps.html" rel="alternate" type="text/html" title="Apps I use on Linux" /><published>2020-07-01T00:00:00-05:00</published><updated>2020-07-01T00:00:00-05:00</updated><id>https://hydrogo.github.io/blog/tips&amp;tricks/2020/07/01/linux-apps</id><content type="html" xml:base="https://hydrogo.github.io/blog/tips&amp;tricks/2020/07/01/linux-apps.html">&lt;h2 id=&quot;prologue&quot;&gt;Prologue&lt;/h2&gt;
 &lt;p&gt;I use Linux (Ubuntu LTS) as my primary operating system since 2015. Celebrating the 5th anniversary, I wish to share the list of applications (both standalone and web) I use on an everyday basis – for programming, writing, and chilling. I hope you will find some of them suitable for you to get more work done. Los!&lt;/p&gt;
 
 &lt;h2 id=&quot;internet&quot;&gt;Internet&lt;/h2&gt;
