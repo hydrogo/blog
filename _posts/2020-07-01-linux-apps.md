@@ -10,7 +10,7 @@ categories: [tips&tricks]
 I use Linux (Ubuntu LTS) as my primary operating system since 2015. Celebrating the 5th anniversary, I wish to share the list of applications (both standalone and web) I use on an everyday basis -- for programming, writing, and chilling. I hope you will find some of them suitable for you to get more work done. Los!
 
 ## Internet
-* [Firefox](https://www.mozilla.org/en-US/firefox/) -- my default web-browser. Security, extensions, customization capabilities are the reasons to name it the must in available options.
+* [Firefox](https://www.mozilla.org/en-US/firefox/) -- my default web-browser. Security, extensions, customization capabilities are the reasons to name it the must have.
 * [Chrome](https://www.google.com/chrome/) -- some applications (usually developed by government authorities) are still optimized directly for Chrome. It is nice to have Chrome at hand for these (rare) cases.
 
 ## Mails
@@ -73,4 +73,4 @@ I use Linux (Ubuntu LTS) as my primary operating system since 2015. Celebrating 
 
 ## Epilogue
 
-I don't have any plans to migrate from Linux back to Windows or to macOS. I am happy and satisfied with the tools I mentioned above -- it is everything that I need to get my work done.
+I don't have any plans to migrate from Linux back to Windows or to macOS. I am happy and satisfied with the tools I mentioned above -- it is everything what I need to get my work done.
